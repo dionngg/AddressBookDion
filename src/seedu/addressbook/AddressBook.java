@@ -380,7 +380,7 @@ public class AddressBook {
         case COMMAND_LIST_WORD:
             return executeListAllPersonsInAddressBook();
         case COMMAND_DELETE_WORD:
-            return executeDeletePerson(commandArgs);
+            return deletePerson(commandArgs);
         case COMMAND_CLEAR_WORD:
             return executeClearAddressBook();
         case COMMAND_HELP_WORD:
@@ -503,7 +503,7 @@ public class AddressBook {
      * @param commandArgs full command args string from the user
      * @return feedback display message for the operation result
      */
-    private static String executeDeletePerson(String commandArgs) {
+    private static String deletePerson(String commandArgs) {
         if (!isDeletePersonArgsValid(commandArgs)) {
             return getInvalidCommandInputMessage(COMMAND_DELETE_WORD, getUsageInfoForDeleteCommand());
         }
@@ -554,7 +554,7 @@ public class AddressBook {
     /**
      * Constructs a feedback message for a successful delete person command execution.
      *
-     * @see #executeDeletePerson(String)
+     * @see #deletePerson(String)
      * @param deletedPerson successfully deleted
      * @return successful delete person feedback message
      */
