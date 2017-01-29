@@ -623,8 +623,8 @@ public class AddressBook {
      * Shows a message to the user
      */
     private static void showToUser(String... message) {
-        for (String m : message) {
-            System.out.println(LINE_PREFIX + m);
+        for (String input : message) {
+            System.out.println(LINE_PREFIX + input);
         }
     }
 
